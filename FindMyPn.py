@@ -1,8 +1,9 @@
 import glob
 from tkinter import *
+import re
 
 def findmix(rawmix):
-    mixRegex = re.compile(r'3\d{7}')
+    mixRegex = re.compile(r'[38]\d{7}')
     extractedMixLst = mixRegex.findall(rawmix)
     return extractedMixLst
 
@@ -13,7 +14,7 @@ def all(event=None):
     t2.insert(END, str(pn_raw))
     pn_l = findmix(pn_raw)
     #path = '\\'+'\\vcatsvcg\\Imagefiles\\'
-    path = '\\'+'\\vcatsvcg.gen.volvocars.net\\Imagefiles\\'
+    path = '\\'+'\\vcatsvcgp.gen.volvocars.net\\Imagefiles\\'
 
 
     for pt in pn_l:
